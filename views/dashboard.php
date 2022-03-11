@@ -7,7 +7,6 @@ require_once '../ContactController.php';
   $user =  new UserController();
   $allusers = $user->readData();
 
-
 ?>
 
 <style>
