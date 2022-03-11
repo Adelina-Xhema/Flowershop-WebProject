@@ -1,11 +1,13 @@
-<?php include ('../config/dbconnect.php');?>
+
 <?php
+session_start();
 require_once '../ProduktiController.php';
 require_once '../UserController.php';
 require_once '../ContactController.php';
   
   $user =  new UserController();
   $allusers = $user->readData();
+
 
 ?>
 
@@ -85,6 +87,10 @@ td a{
   </head>
   <body>
 
+      <?php
+        if (isset($_SESSION['roli']) && $_SESSION['roli']==1) {
+        ?>
+
   <div class="header-div">
       <div class="img-div">
         <a href="../index.php"><img src="../images/flower1.png" alt="" >
@@ -135,7 +141,7 @@ td a{
               <td><a href="deleteProduct.php?id=<?php echo $product['id'];?>">Delete</a></td>
             </tr>
           <?php endforeach;?>
-          <tr><td colspan="5" ><a style="font-size:17pt; text-decoration: none; color:#6600ff; " href="addProduct.php" id="newProduct">ADD PRODUCT</a></td></tr>
+          <tr><td colspan="5" ><a style="font-size:18pt; text-decoration: none; color:#6600ff; " href="addProduct.php" id="newProduct">ADD PRODUCT</a></td></tr>
           
         </tbody>
         
@@ -228,6 +234,12 @@ td a{
 &nbsp;
   </body>
   <?php include '../includes/footer.php' ?>
-  
+  <?php
+ 
+        }
+        else{
+         echo "You are not admin!
+          You don't have access in this page!";}
+    ?>
   </html>
 
