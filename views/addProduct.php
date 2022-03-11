@@ -34,6 +34,7 @@ if(isset($_POST['submit'])){
     background-color: transparent;  
 }
     
+    
 .submit{
     display: inline-block;
     margin-top:16px;
