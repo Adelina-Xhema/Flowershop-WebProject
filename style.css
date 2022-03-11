@@ -1,0 +1,537 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html{
+    font-family: 'Courgette', cursive;
+}
+.pink-div{
+	background-image: url(images/h-.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 730px;
+    margin-top:55px;
+}
+.header-div{
+	display: flex;
+    background-color: white;
+	height:40px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    padding:15px;   
+}
+.img-div{
+	position: absolute;
+	left: 0%;
+}
+ .nav-list{
+      display: flex;
+     list-style-type: none; 
+}
+.list-div{
+    position:relative;
+     left: 28%;
+     text-decoration: none;
+}
+ .nav-list li{
+    list-style: none;
+    display: inline;
+    margin:20px;   
+ }
+ .nav-list li a{
+    color: black;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 21px;
+    font-weight: bolder;
+    font-family: 'Courgette', cursive;
+}
+ .nav-list a:hover{
+     color:#ff4dff;
+ }
+ .content-div{
+  position: absolute;
+  top: 30%;
+  left: 7%;
+ }
+ .content-div h5{
+    font-size:55px;
+    color:#FFF8DC;
+    line-height: 1.5;
+    font-family: 'Courgette', cursive;
+}
+  .content-div p{
+    font-size:25px;
+    width:450px;
+    color:#c6538c;
+    line-height: 1.5;
+    margin-top:10px;
+    margin-bottom:100px;
+    width:350px;
+}
+ .content-div .button{
+    display: inline-block;
+    border-radius:5px;
+    background:#333;
+    color:#fff;
+    padding:5px;
+    font-size:18pt;
+    text-decoration: none;
+}
+ .content-div .button:hover{
+    background:purple;
+}
+/*---------------best selliing---------*/
+
+.best-selling{
+    height:auto;
+}
+.best-selling .heading{
+   text-align: center;
+    font-size: 40px;
+    color: #333;
+    padding: 16px;
+    margin:36px;
+    margin-left:2%;
+    margin-top:-100px; 
+    font-family: 'Courgette', cursive;
+}
+.best-selling .produktet{
+  margin-bottom:50px;
+}
+ /*---------------------ABOUT-----------------*/
+ .about-div{
+    /* background-image: url(images/da2.jpg);*/
+     background-color: #ebc6d9;
+     height:1100px;
+     margin-top:-50px;
+ }
+ .about-div .heading{
+    text-align: center;
+     font-size: 40px;
+     color:#000000;
+     padding: 16px;
+     margin:36px;
+     margin-left:2%;
+     margin-top:120px;
+ }
+  .row{
+     display: flex;
+     align-items: center;
+     margin-top:10px;
+     flex-wrap: wrap;
+     padding:3px;
+     padding-bottom:10px;
+     margin-top:80px;
+ } 
+  .row .slideshow-div{
+     flex:1 1 40px;
+     position: relative;
+ }
+ .row .slideshow-div img{
+     width:600px;
+     height: 370px;
+     flex:10 1 4px;
+     position: relative;
+     margin-left: 15%;
+     margin-top:-30px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+ }
+ .row .content{
+     flex:120 10 50px;
+     margin-right:100px;
+     margin-left:200px;
+     margin-top:-60px;
+     position:relative;
+     max-width: 550px;
+ }
+  .row .content h3{
+     font-size:24pt;
+     color:#333;
+     text-align:center;
+     margin-top:20px;
+ 
+ 
+ }
+  .row .content p{
+     font-size:16pt;
+     color:#333333;
+     padding:30px;
+     padding-top: 16px;
+     line-height: 1.3;
+ }
+ .row .content{
+     flex:120 10 50px;
+     margin-right:70px;
+     margin-left:50px;
+     margin-top:-60px;
+ }
+  .row .content h3{
+     font-size:24pt;
+     color:#333;
+     text-align:center;
+     margin-top:20px;
+ }
+  .row .content p{
+     font-size:16pt;
+     color:#333333;
+     padding:30px;
+     padding-top: 16px;
+     line-height: 1.3;
+ }
+      /*------------------CONTACT--------------*/
+.contact-div{
+     height:700px;
+     background-image:url(images/flo4.jpg);
+}
+.contact-div .heading{
+   text-align: center;
+    font-size: 40px;
+    color: #333;
+    padding: 16px;
+    margin:36px;
+    margin-left:2%;
+    margin-top:5%; 
+}
+label{
+    display:block;
+    margin-left:37%;
+}
+.heading span{
+    color:#e84393;
+}
+.contact .email{
+    background-color:#ffe6e6;
+    border:1px black solid;
+    padding:7px;
+    border-radius:10px;
+    margin:13px 0;
+    text-align:center;
+    font-size:12pt;
+    width:270px;
+    height:20px;
+    margin-bottom:10px;
+    margin-left:2px;
+}
+.contact input[type=text]{
+    background-color:#ffe6e6;
+    border:1px black solid;
+    padding:7px;
+    border-radius:10px;
+    margin:13px 0;
+    text-align:center;
+    font-size:12pt;
+    width:270px;
+    height:20px;
+    margin-bottom:10px;
+}
+.contact textarea{
+    background-color:#ffe6e6;
+    border:1px black solid;
+    padding:7px;
+    border-radius:10px;
+    margin:13px 0;
+    text-align:center;
+    font-size:12pt;
+    width:270px;
+    max-width:270px;
+    height:60px;
+    max-height:200px;
+    margin-bottom:10px;
+   
+}
+.contact{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+    width:45%;
+    margin-left:20%;
+    margin-top:1%;
+}
+.contact form{
+    flex:1 1 20px;
+    padding:32px 32px;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+    border:.1px solid rgba(0,0,0,.1);
+    background-color: transparent;
+    border-radius:40px;
+    width:90px;
+    margin-left:32%;
+    padding-left:10%;
+}
+.contact .submit {
+    display: inline-block;
+    margin-top:16px;
+    border-radius:10px;
+    background: #333;
+    color: #fff;
+    padding:13px;
+    font-size:15px;
+    width:105px;
+    height:45px;
+    margin-left:30%;
+    border:.1px solid rgba(0,0,0,.1);
+}
+    /*------------------PRODUKTET-------------*/
+ .produktet-div{
+    background-color:#f2d9e6;
+    min-height:1400px;
+    height:auto;
+
+ }
+ .produktet-div .heading{
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+    padding: 16px;
+    margin:36px;
+    margin-left:2%;
+    margin-top:70px; 
+    font-family: 'Courgette', cursive;
+}
+.produktet{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap:27px;
+    
+}
+.produkti{
+    text-align: center;
+    padding: 10px;
+    border:3px solid rgba(0,0,0,.1);
+    box-shadow: 0 .5rem 2.5rem rgba(0,0,0,.1);
+    margin-left:17px;
+    border-radius: .5rem;
+    position: relative;    
+    padding-top:10px;
+    margin-bottom:30px;
+}
+.produkti img{
+    width: 340px;
+    height: 350px; 
+}
+.produkti:hover img{
+    transform: scale(1.1);
+} 
+  .produkti h2{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.produkti p{
+    text-align: center;
+    color: crimson;
+  }
+.produkti .btn {
+    display: inline-block;
+    margin-top:16px;
+    border-radius:10px;
+    background:#ff9999;
+    color:#000000;
+    padding:4px;
+    font-size:14px;
+
+}
+    /*----------------LOG IN----------------*/
+.login-div{
+    height:460px;
+    background-image:url(images/vv.jpg);
+    background-repeat: no-repeat;
+   
+}
+.login-div h1{
+    margin-top:100px;
+    text-align:center;
+    font-size:30pt;
+}
+.main{
+   /* background-color:white;
+    border:1px black solid;*/
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+    border:.3px solid rgba(0,0,0,.1);
+    background-color:#c299ff;
+    width:400px;
+    height:250px;
+    padding:20px 20px;
+    margin:40px auto 40px auto;
+    border-radius:30px;
+    text-align:center;
+    margin-top:30px;
+    margin-right:400px;
+    margin-left:450px;  
+}
+input {
+    background-color:#ffe6e6;
+    border:1px black solid;
+    padding:7px;
+    border-radius:10px;
+    margin:13px 0;
+    text-align:center;
+    font-size:12pt;
+    width:270px;
+    height:20px;
+    margin-bottom:10px;   
+}
+.btn{
+    display: inline-block;
+    border-radius:10px;
+    background: #333;
+    color: #fff;
+    padding:13px;
+    font-size:15px;
+    width:105px;
+    height:45px;
+    margin-left:3%;
+    margin-top:30px;
+}
+.main .btn:hover {
+  opacity: 0.8;
+  background-color:#ff9999;
+}
+    /*-----------------REGISTER FORM--------------*/
+
+.container h1{
+    margin-left:68%;
+}
+.container{
+    margin-top:76px;
+    width:100%;
+    height:700px;
+    background-image:url(images/t.jpg);
+    background-repeat: no-repeat;
+}
+.container .row{
+    background-color:#e6b3b3;
+    border:1px black solid;
+    max-width:270px;
+    height:480px;
+    padding:20px 50px;
+    margin:40px auto 40px auto;
+    border-radius:40px;
+    text-align:center;
+    margin-top:20px;
+    margin-left:58%; 
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.2);
+    border:.1px solid rgba(0,0,0,.1);
+    background-color: transparent;  
+}
+.submitbtn{
+    display: inline-block;
+    margin-top:16px;
+    border-radius:10px;
+    background: #333;
+    color: #fff;
+    padding:13px;
+    font-size:15px;
+    width:105px;
+    height:45px;
+    margin-left:33%;
+}
+.row input{
+    padding:7px;
+}
+/*------------FOOTER--------------*/
+.footer-div {
+  position:relative;
+  display:flex;
+  bottom:0;
+  left:0;
+  width:100%;
+  height: 160px;
+  background-color:#e6b3cc;
+}
+.footer-div .lista{
+    font-size:20px;
+    padding:20px 20px;
+    line-height: 2.1;
+}
+.footer-div .lista a{
+    text-decoration:none;
+    font-size:16pt;
+    margin-left:40px;
+    color:black;
+}
+.adresa{
+    padding:20px;
+    margin-left:19%;
+}
+.adresa ul li{
+    padding:10px;
+     font-weight: bold;
+}
+.orari{
+    padding:20px;
+    margin-left:19%;
+}
+.orari ul li{
+    padding:10px;
+    font-weight: bold;
+}
+
+/*  Responzive per iphone X   
+-Responsive jane faqet: Home, Products, Contact  */
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) {
+
+.list-div{
+     left: 30%;  
+}
+.nav-list li a{
+    font-size:18pt;
+}
+.content-div{
+  top:8%;
+  left:3%;
+ }
+.best-selling{
+    height:auto;
+}
+.best-selling .heading{
+    margin-top:-25%; 
+}
+.produktet-div{
+    height:auto;
+ }
+ .produktet{
+    margin-left:8%;
+   
+ }
+
+.row .img-div img{
+    width:350px;
+    height:300px;
+    margin-left: 10%;
+    margin-top:4%;
+}
+.contact-div{
+     height:800px;
+}
+.contact{
+    width:62%;
+    margin-left:10%;   
+}
+.main{
+    margin-left:260px;  
+}
+.footer-div {
+  height:24%;
+  margin-top:-1%;
+}
+.footer-div .lista a{
+    margin-left:20px;
+}
+
+.adresa{
+    margin-left:3%;
+}
+.orari{
+    margin-left:18%;
+}}
