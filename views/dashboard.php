@@ -1,10 +1,10 @@
-
 <?php
-session_start();
+ session_start();
 require_once '../ProduktiController.php';
 require_once '../UserController.php';
 require_once '../ContactController.php';
-  
+require_once '../PorosiaController.php';
+
   $user =  new UserController();
   $allusers = $user->readData();
 
@@ -60,16 +60,10 @@ require_once '../ContactController.php';
     text-decoration: none;
 }
 td a{
- color:#cc3399;
- text-decoration: none;
+  color:#cc3399;
+  text-decoration: none;
  font-weight: bold;
- font-size:13pt;
 
-}
-.header-div .list-div{
-    position:relative;
-     left:28%;
-     text-decoration: none;
 }
 </style>
 
@@ -86,10 +80,10 @@ td a{
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   </head>
   <body>
-
-      <?php
+  <?php
         if (isset($_SESSION['roli']) && $_SESSION['roli']==1) {
         ?>
+
 
   <div class="header-div">
       <div class="img-div">
@@ -108,9 +102,9 @@ td a{
       </div>    
       
 
-<div class="tabela1">
+<div class="tabela1" id="produkti">
     <table class="content-table">
-      <h2 style="text-align:center;">Produktet</h2>
+      <h2 style="text-align:center; color:#ff3300;">PRODUKTET</h2>
         <thead>
             <tr>
               <th>Id</th>
@@ -118,8 +112,7 @@ td a{
               <th>Emri</th>
               <th>Pershkrimi</th>
               <th>Cmimi</th>
-             <!--<th>Edit</th>-->
-              <th>Delete</th>
+             
             </tr>
         </thead>
         <tbody>
@@ -141,7 +134,7 @@ td a{
               <td><a href="deleteProduct.php?id=<?php echo $product['id'];?>">Delete</a></td>
             </tr>
           <?php endforeach;?>
-          <tr><td colspan="5" ><a style="font-size:18pt; text-decoration: none; color:#6600ff; " href="addProduct.php" id="newProduct">ADD PRODUCT</a></td></tr>
+          <tr><td colspan="5"><a style="font-size:19pt; text-decoration: none; color:#6600ff; " href="addProduct.php" id="newProduct">Add product</a></td></tr>
           
         </tbody>
         
@@ -150,7 +143,7 @@ td a{
 <br>
 <div class="tabela2">
 
-     <h2 style="text-align:center;">Users</h2>
+     <h2 style="text-align:center; color:#ff3300;">USERS</h2>
     <table class="content-table">
         <thead>
             <tr>
@@ -160,8 +153,7 @@ td a{
               <th>Email</th>
               <th>Password</th>
               <th>Role</th>
-              <th>Edit</th>
-              <th>Delete</th>
+              
             </tr>
         </thead>
         <tbody>
@@ -190,18 +182,70 @@ td a{
     </table>
 </div>
 <br>
+
 <div class="tabela3">
 
-   <h2 style="text-align:center;">Contact message</h2>
+     <h2 style="text-align:center; color:#ff3300;">POROSIT</h2>
     <table class="content-table">
         <thead>
             <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Qyteti</th>
+              <th>Adresa</th>
+              <th>Tel</th>
+              <th>Produkti</th>
+              <th>Sasia</th>
               
+            </tr>
+        </thead>
+        <tbody>
+
+            <?php
+
+            $porosit = new PorosiaController;
+            $allPorosit = $porosit->readData();
+        
+            foreach ($allPorosit as $porosia): ?>
+
+            <tr>
+              <td><?php echo $porosia['id']?></td>
+              <td><?php echo $porosia['firstname']?></td>
+              <td><?php echo $porosia['lastname']?></td>
+              <td><?php echo $porosia['email']?></td>
+              <td><?php echo $porosia['qyteti']?></td>
+              <td><?php echo $porosia['adresa']?></td>
+              <td><?php echo $porosia['tel']?></td>
+              <td><?php echo $porosia['produkti']?></td>
+              <td><?php echo $porosia['sasia']?></td>
+
+              <td id="delete"><a href="deletePorosin.php?id=<?php echo $porosia['id'];?>">Delete</a></td>
+            </tr>
+          <?php endforeach;?>
+
+        </tbody>
+        <body>
+    </table>
+</div>
+
+
+
+
+<br>
+<div class="tabela4">
+
+   <h2 style="text-align:center; color:#ff3300;">CONTACT MESSAGE</h2>
+    <table class="content-table">
+        <thead>
+            <tr>
+              <th>id</th>
               <th>Emri</th>
               <th>Mbiemri</th>
               <th>Email</th>
-              <th> Ky  eshte  Mesazhi  per  faqen  Flower-Shop</th>
-              <th>Delete</th>
+              <th> Ky eshte Mesazhi </th>
+             
             </tr>
         </thead>
         <tbody>
@@ -215,7 +259,7 @@ td a{
 
 
             <tr>
-            
+              <td><?php echo $user['id']?></td>
               <td><?php echo $contact['emri']?></td>
               <td><?php echo $contact['mbiemri']?></td>
               <td><?php echo $contact['email']?></td>
@@ -235,11 +279,7 @@ td a{
   </body>
   <?php include '../includes/footer.php' ?>
   <?php
- 
         }
-        else{
-         echo "You are not admin!
-          You don't have access in this page!";}
     ?>
   </html>
 
