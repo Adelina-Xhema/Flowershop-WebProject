@@ -1,8 +1,6 @@
 <?php
 require_once 'config/dbconnect.php';
-/* 
-Controller i ka funksionet insert delete edit qe komunikon direk me databaze ??
- */
+
 class PorosiaController{
     public $db;
 
