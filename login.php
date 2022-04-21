@@ -1,9 +1,9 @@
 <?php
-    require_once 'AuthController.php';
+    
     require_once 'UserController.php';
 ?>
 <?php
-    $user = new AuthController;
+    $user = new UserController;
 
     if(isset($_POST['submit'])) {
         $user->login($_POST);
