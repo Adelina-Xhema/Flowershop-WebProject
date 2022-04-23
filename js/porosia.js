@@ -8,6 +8,7 @@ function validatePorosia(){
     var adresa=document.getElementById('adresa').value;
     
     var regex=/^[0-9]/;
+    
     if(emri=="" || mbiemri=="" || email=="" || adresa=="" || qyteti==""){
       alert("Shkruaj sakt te dhenat");
       return false;
